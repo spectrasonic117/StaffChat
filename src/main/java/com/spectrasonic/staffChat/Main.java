@@ -2,7 +2,6 @@ package com.spectrasonic.staffChat;
 
 import com.spectrasonic.staffChat.Commands.StaffChatCommand;
 import com.spectrasonic.staffChat.Utils.MessageUtils;
-import org.bukkit.event.Listener;
 import org.bukkit.plugin.java.JavaPlugin;
 
 import java.util.Objects;
@@ -23,5 +22,4 @@ public class Main extends JavaPlugin {
     public void registerCommands(){
         Objects.requireNonNull(this.getCommand("sc")).setExecutor(new StaffChatCommand(this));
     }
-
 }

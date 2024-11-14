@@ -23,21 +23,16 @@ public class StaffChatCommand implements CommandExecutor {
                     for (String arg : args) {
                         message.append(arg).append(" ");
                     }
-                    // Send the message to staff
                     String formattedMessage = ChatColor.translateAlternateColorCodes('&', "&7[&dStaff&7] &6» &b" + message.toString().trim());
                     Bukkit.getOnlinePlayers().stream()
                             .filter(p -> p.hasPermission("staffchat.chat"))
                             .forEach(p -> p.sendMessage(formattedMessage));
                 } else {
-                    player.sendMessage(ChatColor.RED + "Usage: /sc <message>");
                     MessageUtils.sendMessage(sender, "&e[❗] Usage: /sc <sessage>");
 
                 }
             } else {
-                player.sendMessage(ChatColor.RED + "You do not have permission to use this command.");
-                MessageUtils.sendMessage(sender, "&cYou do not have permission to use this command.");
-
-
+                MessageUtils.sendMessage(sender, "&e[❗] You do not have permission to use this command.");
             }
             return true;
         }
