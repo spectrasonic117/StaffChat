@@ -10,13 +10,17 @@ public class Main extends JavaPlugin {
 
     @Override
     public void onEnable() {
-        MessageUtils.sendStartupMessage(this);
+
         registerCommands();
+        MessageUtils.sendStartupMessage(this);
+
     }
 
     @Override
     public void onDisable() {
+
         MessageUtils.sendShutdownMessage(this);
+
     }
 
     public void registerCommands(){

@@ -2,14 +2,17 @@ name: StaffChat
 version: '${version}'
 main: com.spectrasonic.staffChat.Main
 api-version: '1.21'
-authors: [ Spectrasonic ]
+authors:
+  - SpectraSonic
 commands:
   sc:
     description: Send a message to the staff chat.
-    usage: /<command> <message>
+    usage: /sc <message>
     permission: staffchat.chat
     permission-message: You do not have permission to use this command.
-    aliases: [ac]
+    aliases:
+      - ac
+      - staffchat
 permissions:
   staffchat.chat:
     description: Allows a player to use the staff chat commands

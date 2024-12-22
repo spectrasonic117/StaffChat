@@ -11,8 +11,10 @@ import org.bukkit.entity.Player;
 
 public class StaffChatCommand implements CommandExecutor {
 
+
     public StaffChatCommand(Main plugin) {
     }
+
     @SuppressWarnings("all")
     @Override
     public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
@@ -29,12 +31,11 @@ public class StaffChatCommand implements CommandExecutor {
                             .filter(p -> p.hasPermission("staffchat.chat"))
                             .forEach(p -> p.sendMessage(formattedMessage));
                 } else {
-                    player.sendMessage(net.md_5.bungee.api.ChatColor.of("#FFFF") + "[❗] Usage: /sc <sessage>");
+                    MessageUtils.sendMessage(sender, "&e[❗] Usage: /sc <sessage>");
 
                 }
             } else {
                 MessageUtils.sendMessage(sender, "&e[❗] You do not have permission to use this command.");
-                player.sendMessage(net.md_5.bungee.api.ChatColor.of("#FFFF") + "[❗] You do not have permission to use this command.");
             }
             return true;
         }

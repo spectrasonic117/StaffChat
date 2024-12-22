@@ -3,7 +3,7 @@ plugins {
 }
 
 group = 'com.spectrasonic'
-version = '1.0.1-SNAPSHOT'
+version = '1.0.1-NionStudios'
 
 repositories {
     mavenCentral()
@@ -19,6 +19,7 @@ repositories {
 
 dependencies {
     compileOnly("org.spigotmc:spigot-api:1.21.1-R0.1-SNAPSHOT")
+
 }
 
 def targetJavaVersion = 21
