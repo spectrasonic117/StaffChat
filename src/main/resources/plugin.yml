@@ -17,3 +17,6 @@ permissions:
   staffchat.chat:
     description: Allows a player to use the staff chat commands
     default: op
+  staffchat.reload:
+    description: Allows reloading the configuration
+    default: op

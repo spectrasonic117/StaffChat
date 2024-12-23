@@ -1,0 +1,10 @@
+# This is the configuration file for the StaffChat plugin.
+
+staff-chat:
+  prefix: "<gray>[</gray><color:#e70b82>Nion<gray>]</gray> <gold>» </gold>"
+  message-color: "<color:#ff007f>"
+messages:
+  usage: "<yellow>[❗] Usage: /sc <message>"
+  no-permission: "<red>[❗] You do not have permission to use this command."
+  reload-success: "<green>[✓] Configuration reloaded successfully!"
+  reload-no-permission: "<red>[❗] You do not have permission to reload the configuration."
